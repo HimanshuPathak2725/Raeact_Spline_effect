@@ -1,0 +1,79 @@
+* {
+  box-sizing: border-box;
+  color: antiquewhite;
+}
+
+html, body, #root {
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+
+.container > div:first-child {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.content {
+  position: relative;
+  z-index: 2;
+  padding: 4rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  background: transparent;
+  font-family: 'Space Mono', monospace;
+}
+
+.content h1 {
+  font-size: 4.5rem;
+  margin-bottom: 2rem;
+  background: linear-gradient(45deg, #00ff88, #00ffee);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-shadow: 0 0 20px rgba(0, 255, 136, 0.3);
+  letter-spacing: 2px;
+  transition: all 0.3s ease;
+}
+
+.content h1:hover {
+  transform: scale(1.02);
+  text-shadow: 0 0 30px rgba(0, 255, 136, 0.5);
+}
+
+.content p {
+  font-size: 1.6rem;
+  line-height: 1.8;
+  color: #b4f2e1;
+  text-shadow: 0 0 10px rgba(180, 242, 225, 0.3);
+  margin-bottom: 1.5rem;
+  letter-spacing: 1px;
+  max-width: 800px;
+}
+
+.content p:hover {
+  color: #d4ffe6;
+  text-shadow: 0 0 15px rgba(180, 242, 225, 0.5);
+}
+
+.watermark-cover {
+  position: absolute;
+  bottom: 10;
+  right: 0;
+  width: 120px;
+  height: 40px;
+  background: linear-gradient(to right, transparent, rgba(0, 0, 0, 0.7));
+  z-index: 3;
+  pointer-events: none;
+}
